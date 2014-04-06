@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "VOODOO ESTUDIO";
+}
+@model Voodoo.Models.Sections
+@foreach (var s in Model) { 
+    <div id="@s.Name.ToLowerInvariant()" class="section resmode-Yes" style="background-color: @s.Color">
+        @if (s.InContainer)
+        { 
+            <div class="container">
+                @{Html.RenderAction(@s.Name, "Home");}
+            </div>
+        }
+        else
+        {
+            Html.RenderAction(@s.Name, "Home");
+        }
+    </div>
+}
+

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Header";
+}
+@model IEnumerable<Voodoo.Models.Section>
+<div class="container" style="overflow:visible;">
+<a href="@Url.Action("")">
+    <img class="logo" src="@Url.Content("~/Content/images/custom/logo.png")" alt="Barrci Theme">
+</a>
+<ul id="nav" class="menu">
+@foreach (var s in Model) { 
+    <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#@s.Name.ToLowerInvariant()">@s.Name</a></li>
+}
+</div>
+<div style="clear: both;"></div>
