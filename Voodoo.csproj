@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD7C1DF6-AFF3-4D47-8198-991AB3777372}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voodoo</RootNamespace>
+    <AssemblyName>Voodoo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <JSLintSkip>\Content\js\lib\</JSLintSkip>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Ninject.Web.Common.3.2.0.0\lib\net40-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Ninject.MVC3.3.2.0.0\lib\net40-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sections.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\images\arrow-superfish-inv.png" />
+    <Content Include="Content\images\arrow-superfish-right.png" />
+    <Content Include="Content\images\arrow-superfish.png" />
+    <Content Include="Content\images\bg-box.png" />
+    <Content Include="Content\images\bg-light-small.png" />
+    <Content Include="Content\images\bg-light.png" />
+    <Content Include="Content\images\bg\bg-dots1.png" />
+    <Content Include="Content\images\bg\bg-line1.png" />
+    <Content Include="Content\images\bg\bg-line2.png" />
+    <Content Include="Content\images\bg\bg-line3.png" />
+    <Content Include="Content\images\bg\bg-line4.png" />
+    <Content Include="Content\images\bg\bg-line5.png" />
+    <Content Include="Content\images\bg\bg-line6.png" />
+    <Content Include="Content\images\bg\bg-line7.png" />
+    <Content Include="Content\images\bg\bg-line8.png" />
+    <Content Include="Content\images\bg\bg-line9.png" />
+    <Content Include="Content\images\bg\bg-pattern1.png" />
+    <Content Include="Content\images\bg\bg-square1.png" />
+    <Content Include="Content\images\bg\bg-square2.png" />
+    <Content Include="Content\images\bg\bg-square3.png" />
+    <Content Include="Content\images\bg\bg-square4.png" />
+    <Content Include="Content\images\bg\bg-square5.png" />
+    <Content Include="Content\images\bg\bg-square6.png" />
+    <Content Include="Content\images\bg\bg-transparent.png" />
+    <Content Include="Content\images\bg\bg-zig.png" />
+    <Content Include="Content\images\bg\pattern.png" />
+    <Content Include="Content\images\bg_trans.png" />
+    <Content Include="Content\images\bull.png" />
+    <Content Include="Content\images\custom\logo.png" />
+    <Content Include="Content\images\custom\LogoAlta.png" />
+    <Content Include="Content\images\divider1.png" />
+    <Content Include="Content\images\divider10.png" />
+    <Content Include="Content\images\divider11.png" />
+    <Content Include="Content\images\divider12-v.png" />
+    <Content Include="Content\images\divider12.png" />
+    <Content Include="Content\images\divider13.png" />
+    <Content Include="Content\images\divider14.png" />
+    <Content Include="Content\images\divider15.png" />
+    <Content Include="Content\images\divider16.png" />
+    <Content Include="Content\images\divider17.png" />
+    <Content Include="Content\images\divider18.png" />
+    <Content Include="Content\images\divider19.png" />
+    <Content Include="Content\images\divider2.png" />
+    <Content Include="Content\images\divider20.png" />
+    <Content Include="Content\images\divider21.png" />
+    <Content Include="Content\images\divider22.png" />
+    <Content Include="Content\images\divider23.png" />
+    <Content Include="Content\images\divider24.png" />
+    <Content Include="Content\images\divider3.png" />
+    <Content Include="Content\images\divider4.png" />
+    <Content Include="Content\images\divider5.png" />
+    <Content Include="Content\images\divider6-v.png" />
+    <Content Include="Content\images\divider6.png" />
+    <Content Include="Content\images\divider7.png" />
+    <Content Include="Content\images\divider8.png" />
+    <Content Include="Content\images\divider9.png" />
+    <Content Include="Content\images\edge-shadows-small.png" />
+    <Content Include="Content\images\edge-shadows.png" />
+    <Content Include="Content\images\featured-description.png" />
+    <Content Include="Content\images\fotos-home\FOTO-1.png" />
+    <Content Include="Content\images\fotos-home\FOTO-10.png" />
+    <Content Include="Content\images\fotos-home\FOTO-11.png" />
+    <Content Include="Content\images\fotos-home\FOTO-12.png" />
+    <Content Include="Content\images\fotos-home\FOTO-13.png" />
+    <Content Include="Content\images\fotos-home\FOTO-14.png" />
+    <Content Include="Content\images\fotos-home\FOTO-15.png" />
+    <Content Include="Content\images\fotos-home\FOTO-16.png" />
+    <Content Include="Content\images\fotos-home\FOTO-17.png" />
+    <Content Include="Content\images\fotos-home\FOTO-18.png" />
+    <Content Include="Content\images\fotos-home\FOTO-19.png" />
+    <Content Include="Content\images\fotos-home\FOTO-2.png" />
+    <Content Include="Content\images\fotos-home\FOTO-20.png" />
+    <Content Include="Content\images\fotos-home\FOTO-21.png" />
+    <Content Include="Content\images\fotos-home\FOTO-22.png" />
+    <Content Include="Content\images\fotos-home\FOTO-23.png" />
+    <Content Include="Content\images\fotos-home\FOTO-24.png" />
+    <Content Include="Content\images\fotos-home\FOTO-25.png" />
+    <Content Include="Content\images\fotos-home\FOTO-26.png" />
+    <Content Include="Content\images\fotos-home\FOTO-27.png" />
+    <Content Include="Content\images\fotos-home\FOTO-28.png" />
+    <Content Include="Content\images\fotos-home\FOTO-29.png" />
+    <Content Include="Content\images\fotos-home\FOTO-3.png" />
+    <Content Include="Content\images\fotos-home\FOTO-30.png" />
+    <Content Include="Content\images\fotos-home\FOTO-31.png" />
+    <Content Include="Content\images\fotos-home\FOTO-32.png" />
+    <Content Include="Content\images\fotos-home\FOTO-33.png" />
+    <Content Include="Content\images\fotos-home\FOTO-34.png" />
+    <Content Include="Content\images\fotos-home\FOTO-35.png" />
+    <Content Include="Content\images\fotos-home\FOTO-36.png" />
+    <Content Include="Content\images\fotos-home\FOTO-37.png" />
+    <Content Include="Content\images\fotos-home\FOTO-38.png" />
+    <Content Include="Content\images\fotos-home\FOTO-39.png" />
+    <Content Include="Content\images\fotos-home\FOTO-4.png" />
+    <Content Include="Content\images\fotos-home\FOTO-40.png" />
+    <Content Include="Content\images\fotos-home\FOTO-41.png" />
+    <Content Include="Content\images\fotos-home\FOTO-42.png" />
+    <Content Include="Content\images\fotos-home\FOTO-43.png" />
+    <Content Include="Content\images\fotos-home\FOTO-44.png" />
+    <Content Include="Content\images\fotos-home\FOTO-45.png" />
+    <Content Include="Content\images\fotos-home\FOTO-46.png" />
+    <Content Include="Content\images\fotos-home\FOTO-47.png" />
+    <Content Include="Content\images\fotos-home\FOTO-48.png" />
+    <Content Include="Content\images\fotos-home\FOTO-49.png" />
+    <Content Include="Content\images\fotos-home\FOTO-5.png" />
+    <Content Include="Content\images\fotos-home\FOTO-50.png" />
+    <Content Include="Content\images\fotos-home\FOTO-51.png" />
+    <Content Include="Content\images\fotos-home\FOTO-52.png" />
+    <Content Include="Content\images\fotos-home\FOTO-53.png" />
+    <Content Include="Content\images\fotos-home\FOTO-54.png" />
+    <Content Include="Content\images\fotos-home\FOTO-55.png" />
+    <Content Include="Content\images\fotos-home\FOTO-56.png" />
+    <Content Include="Content\images\fotos-home\FOTO-57.png" />
+    <Content Include="Content\images\fotos-home\FOTO-58.png" />
+    <Content Include="Content\images\fotos-home\FOTO-59.png" />
+    <Content Include="Content\images\fotos-home\FOTO-6.png" />
+    <Content Include="Content\images\fotos-home\FOTO-60.png" />
+    <Content Include="Content\images\fotos-home\FOTO-7.png" />
+    <Content Include="Content\images\fotos-home\FOTO-8.png" />
+    <Content Include="Content\images\fotos-home\FOTO-9.png" />
+    <Content Include="Content\images\ico-bird-inv.png" />
+    <Content Include="Content\images\ico-bird.png" />
+    <Content Include="Content\images\ico-rss.png" />
+    <Content Include="Content\images\icons\arr-black.png" />
+    <Content Include="Content\images\icons\bullets.png" />
+    <Content Include="Content\images\icons\def\about.png" />
+    <Content Include="Content\images\icons\def\access.png" />
+    <Content Include="Content\images\icons\def\add.png" />
+    <Content Include="Content\images\icons\def\arrow1.png" />
+    <Content Include="Content\images\icons\def\arrow2.png" />
+    <Content Include="Content\images\icons\def\audio.png" />
+    <Content Include="Content\images\icons\def\audio2.png" />
+    <Content Include="Content\images\icons\def\basket-alt.png" />
+    <Content Include="Content\images\icons\def\calendar.png" />
+    <Content Include="Content\images\icons\def\cinema.png" />
+    <Content Include="Content\images\icons\def\cinema2.png" />
+    <Content Include="Content\images\icons\def\cloud.png" />
+    <Content Include="Content\images\icons\def\favourite.png" />
+    <Content Include="Content\images\icons\def\help.png" />
+    <Content Include="Content\images\icons\def\home.png" />
+    <Content Include="Content\images\icons\def\info.png" />
+    <Content Include="Content\images\icons\def\mail.png" />
+    <Content Include="Content\images\icons\def\pencil.png" />
+    <Content Include="Content\images\icons\def\photo.png" />
+    <Content Include="Content\images\icons\def\star.png" />
+    <Content Include="Content\images\icons\def\stop.png" />
+    <Content Include="Content\images\icons\def\watch.png" />
+    <Content Include="Content\images\icons\format-icons-inv.png" />
+    <Content Include="Content\images\icons\format-icons.png" />
+    <Content Include="Content\images\icons\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\icons\glyphicons-halflings.png" />
+    <Content Include="Content\images\icons\ico-meta.png" />
+    <Content Include="Content\images\icons\icon_facebook.png" />
+    <Content Include="Content\images\icons\icon_rss.png" />
+    <Content Include="Content\images\icons\icon_twitter.png" />
+    <Content Include="Content\images\icons\media-button-video.gif" />
+    <Content Include="Content\images\icons\minus.png" />
+    <Content Include="Content\images\icons\more-blog-alt.png" />
+    <Content Include="Content\images\icons\more-blog.png" />
+    <Content Include="Content\images\icons\more.png" />
+    <Content Include="Content\images\icons\nav_left.png" />
+    <Content Include="Content\images\icons\nav_left_d.png" />
+    <Content Include="Content\images\icons\nav_left_t.png" />
+    <Content Include="Content\images\icons\nav_right.png" />
+    <Content Include="Content\images\icons\nav_right_d.png" />
+    <Content Include="Content\images\icons\nav_right_t.png" />
+    <Content Include="Content\images\icons\search-submit.png" />
+    <Content Include="Content\images\icons\uni-icons.png" />
+    <Content Include="Content\images\icons\uni-icons2.png" />
+    <Content Include="Content\images\icons\up.png" />
+    <Content Include="Content\images\icons\up_t.png" />
+    <Content Include="Content\images\icons\video.png" />
+    <Content Include="Content\images\icons\zoom-black.png" />
+    <Content Include="Content\images\icons\zoom.png" />
+    <Content Include="Content\images\line-bg-medium.png" />
+    <Content Include="Content\images\line-bg-small.png" />
+    <Content Include="Content\images\line-bg.png" />
+    <Content Include="Content\images\line-h-l.png" />
+    <Content Include="Content\images\line-h.png" />
+    <Content Include="Content\images\line-header.png" />
+    <Content Include="Content\images\line-v-l.png" />
+    <Content Include="Content\images\load-indicator.gif" />
+    <Content Include="Content\images\nav-highlight.png" />
+    <Content Include="Content\images\post-overlay.png" />
+    <Content Include="Content\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Content\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Content\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Content\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Content\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Content\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Content\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\images\quote.png" />
+    <Content Include="Content\images\social-spirit-black.png" />
+    <Content Include="Content\images\social-spirit-white.png" />
+    <Content Include="Content\images\social-spirit.png" />
+    <Content Include="Content\images\social_btn.gif" />
+    <Content Include="Content\images\texture-i.png" />
+    <Content Include="Content\images\texture.png" />
+    <Content Include="Content\images\transparent-dark.png" />
+    <Content Include="Content\images\transparent-light.png" />
+    <Content Include="Content\images\transparent.png" />
+    <Content Include="Content\js\lib\css3-mediaqueries.js" />
+    <Content Include="Content\js\lib\jquery.flexslider-min.js" />
+    <Content Include="Content\js\lib\jquery.flexslider.start.folio.js" />
+    <Content Include="Content\js\lib\jquery.flexslider.start.main.js" />
+    <Content Include="Content\js\lib\jquery.hoverIntent.minified.js" />
+    <Content Include="Content\js\lib\jquery.nav.js" />
+    <Content Include="Content\js\lib\jquery.prettyPhoto.js" />
+    <Content Include="Content\js\lib\jquery.scrollTo.js" />
+    <Content Include="Content\js\lib\jquery.tweet.js" />
+    <Content Include="Content\js\lib\ownScript.js" />
+    <Content Include="Content\js\lib\sticky.nav.js" />
+    <Content Include="Content\js\lib\superfish.js" />
+    <Content Include="Content\js\lib\tabs.js" />
+    <Content Include="Content\styles\masstyles.css" />
+    <Content Include="Content\styles\font-awesome-ie7.css" />
+    <Content Include="Content\styles\font-awesome-ie7.min.css" />
+    <Content Include="Content\styles\font-awesome.css" />
+    <Content Include="Content\styles\font-awesome.min.css" />
+    <Content Include="Content\styles\mobile.css" />
+    <Content Include="Content\styles\prettyPhoto.css" />
+    <Content Include="Content\styles\style.css" />
+    <Content Include="Content\styles\voodoo.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\js\lib\jquery-1.9.1-vsdoc.js" />
+    <Content Include="Content\js\lib\jquery-1.9.1.js" />
+    <Content Include="Content\js\lib\jquery-1.9.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Header.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\FontAwesome.otf" />
+    <Content Include="Content\font\AGNextBlack.otf" />
+    <Content Include="Content\font\AGNextBlackIta.otf" />
+    <Content Include="Content\font\AGNextBold.otf" />
+    <Content Include="Content\font\AGNextBoldIta.otf" />
+    <Content Include="Content\font\AGNextExtraBold.otf" />
+    <Content Include="Content\font\AGNextExtraBoldIta.otf" />
+    <Content Include="Content\font\AGNextExtraLight.otf" />
+    <Content Include="Content\font\AGNextExtraLightIta.otf" />
+    <Content Include="Content\font\AGNextIta.otf" />
+    <Content Include="Content\font\AGNextLight.otf" />
+    <Content Include="Content\font\AGNextLightIta.otf" />
+    <Content Include="Content\font\AGNextMedIta.otf" />
+    <Content Include="Content\font\AGNextMedium.otf" />
+    <Content Include="Content\font\AGNextRegular.otf" />
+    <Content Include="Content\font\akzidenz-grotesk-bold.ttf" />
+    <None Include="Content\images\icons\teal.psd" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Home\Trabajos.cshtml" />
+    <Content Include="Views\Home\Servicios.cshtml" />
+    <Content Include="Views\Home\Espacio.cshtml" />
+    <Content Include="Views\Home\Nosotros.cshtml" />
+    <Content Include="Views\Home\Clientes.cshtml" />
+    <Content Include="Views\Home\Contacto.cshtml" />
+    <Content Include="Content\styles\custom.css" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\PublishProfiles\Remote.pubxml" />
+    <Content Include="Views\Home\Mapa.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50605</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50605/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
