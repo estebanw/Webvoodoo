@@ -1,0 +1,60 @@
+﻿@font-face {
+	font-family: AGNextBlack;
+	src: url('../font/AGNextBlack.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextBlackIta;
+	src: url('../font/AGNextBlackIta.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextBold;
+	src: url('../font/AGNextBold.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextBoldIta;
+	src: url('../font/AGNextBoldIta.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextExtraBold;
+	src: url('../font/AGNextExtraBold.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextExtraBoldIta;
+	src: url('../font/AGNextExtraBoldIta.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextExtraLight;
+	src: url('../font/AGNextExtraLight.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextExtraLightIta;
+	src: url('../font/AGNextExtraLightIta.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextIta;
+	src: url('../font/AGNextIta.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextLight;
+	src: url('../font/AGNextLight.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextLightIta;
+	src: url('../font/AGNextLightIta.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextMedIta;
+	src: url('../font/AGNextMedIta.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextMedium;
+	src: url('../font/AGNextMedium.otf') format('opentype');
+}
+@font-face {
+	font-family: AGNextRegular;
+	src: url('../font/AGNextRegular.otf') format('opentype');
+}
+@font-face {
+	font-family: akzidenz-grotesk-bold;
+	src: url('../font/akzidenz-grotesk-bold.ttf') format('truetype');
+}

@@ -1,0 +1,160 @@
+﻿body, .nav > li > ul, li.pricing ul, .tagcloud a:hover, .services, .section
+{
+    background-color: #ffffff;
+}
+
+ul#serinfo-nav
+{
+    border-color: #ffffff !important;
+}
+
+.body2, .header_scroll, .headbg, .header_noslide, #footer, .services h3 i, #portfolio-list > li > span, #content > span, li.main h3
+{
+    background-color: #00070C;
+}
+
+#nav li a, .nav > li > a
+{
+    border-color: #00070C;
+}
+
+span.ribbon, a#trigger, a.fromhome, .imgwrap, .flexslider a.flex-prev, .flexslider a.flex-next, .clients h3 i, #about-us h3 i, #homeblog h3 i, a.mainbutton, a.itembutton, .page-numbers.current, a.comment-reply-link, #submit, #comments .navigation a, .tagssingle a, .contact-form .submit, .intro, li.main h2, .plan-bottom a, .scrollTo_top a, .gallery-item
+{
+    background-color: #00B4DA;
+}
+
+#nav .current a, .nav > li > a:hover, .nav > li.current-menu-ancestor > a, .nav > li.current-menu-item > a, .nav > li.sfHover > a, .nav > li.current-menu-item > a
+{
+    border-color: #00B4DA !important;
+}
+
+.body1 a, a:link, a:visited, #serinfo h4 a
+{
+    color: #121212;
+}
+
+h3.fromhome, li.inside h3, .inside, li.normal h3, .plan-bottom a, .homeblog a
+{
+    color: #ffffff !important;
+}
+
+a:hover, .body1 a:hover, #serinfo a:hover
+{
+    color: #2e2e2e;
+}
+
+.body2 a, a.body2
+{
+    color: #fff;
+}
+
+    .body2 a:hover,
+    p.body2 a:hover
+    {
+        color: #EB5C57!important;
+    }
+
+.intro a:hover, #portfolio-filter a.current, #portfolio-filter li.current-cat a, #portfolio-filter li.active a, #portfolio-filter a.current
+{
+    color: #dedede !important;
+}
+
+.blogpage #content, .entry, .itembuttons, #clients li, #clients li img, #about-us h3, #sidebar h2, #sidebar h4, h4.homepage, .container-alt, #head, #top-nav, .searchformhead input.s, #foliosidebar, .searchform input.s, .nav > li > ul, #main-nav > li, .nav li ul li a, .fullbox, .pagination, input, textarea, input checkbox, input radio, select, file
+{
+    border-color: #e0e0e0 !important;
+}
+
+    body, input, textarea, input checkbox, input radio, select, file
+    {
+        font: normal 12px/2.2em Arial, sans-serif;
+        color: #545454;
+    }
+
+.body2
+{
+    font: normal 11px/2.2em Arial, sans-serif;
+    color: #d9d9d9;
+}
+
+    .body2 h2, .body2 h3
+    {
+        color: #d9d9d9;
+    }
+
+.intro
+{
+    font: normal 12px/2.2em "Akzidenz Grotesk Next", sans-serif;
+    color: #ffffff;
+}
+
+    .intro h1, .intro h1 a, #portfolio-filter a, ul#portfolio-filter li:before, .item_full p.meta a, a.itembutton, a.mainbutton, .ribbon_icon i, .page-numbers.current
+    {
+        color: #ffffff;
+    }
+
+h1
+{
+    font: normal 25px/1.5em "Akzidenz Grotesk Next", sans-serif;
+    color: #222222;
+}
+
+#block ul li h2
+{
+    font-family: "Akzidenz Grotesk Next", sans-serif;
+}
+
+h2
+{
+    font: normal 24px/1.2em "Akzidenz Grotesk Next", sans-serif;
+    color: #222222;
+}
+
+p.image, blockquote
+{
+    font-family: "Akzidenz Grotesk Next", sans-serif;
+}
+
+h3
+{
+    font: normal 20px/1.5em "Roboto", sans-serif;
+    color: #222222;
+}
+
+#sidebar h2, .folio_item h2, #portfolio-list h2, .sserif, a.itembutton, a.mainbutton, .comment-author cite
+{
+    font-family: "Roboto", sans-serif;
+}
+
+h4
+{
+    font: normal 20px/1.5em "Roboto", sans-serif;
+    color: #222222;
+}
+
+h5
+{
+    font: normal 14px/1.5em "Akzidenz Grotesk Next", sans-serif;
+    color: #222222;
+}
+
+h6
+{
+    font: normal 14px/1.5em "Akzidenz Grotesk Next", sans-serif;
+    color: #222222;
+}
+
+#nav li a, .nav > li > a
+{
+    font: normal 12px/1.7em "Roboto", sans-serif;
+    color: #fff;
+}
+
+#portfolio-filter a, .breadcrumb
+{
+    font-family: "Roboto", sans-serif;
+}
+
+.tab-post small a, .taggs a
+{
+    color: #545454;
+}

@@ -1,0 +1,334 @@
+/* @center grid
+********************************************************************************************
+********************************************************************************************/
+
+.centerrow {
+margin: 0;
+width:105%;
+overflow: hidden;
+}
+
+.centerthreecol,.centerfourcol,.centersixcol {
+margin:0 0 0 0;
+float: left;
+min-height: 1px;
+margin-bottom:30px !important;
+}
+
+.centerrow .centerthreecol {
+width: 21.6%;
+margin:0 3% 0 0;
+overflow:hidden;
+}
+
+.centerrow .centerfourcol {
+width: 29.75%;
+margin:0 3% 0 0;
+overflow:hidden;
+}
+
+
+.centerrow .centersixcol {
+width: 46%;
+margin:0 3% 0 0;
+overflow:hidden;
+}
+
+
+/* @the 1140px grid
+********************************************************************************************
+********************************************************************************************/
+
+.container{
+width: 100%;
+max-width: 960px;
+margin: 0 auto 30px auto;
+padding:0;
+overflow:hidden;
+position:relative;
+}
+
+.container-alt { padding:65px 100px 80px 100px; border-bottom:none; border-top:1px solid #ddd;}
+
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol,.fifthcol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+margin-left:0;
+float: left;
+min-height: 1px;
+overflow:hidden;
+}
+
+.twocol {
+width: 10.75%;
+margin-left:5%;
+float:left;
+}
+
+.threecol {
+width: 23.3%;
+margin-left:2.2%;
+float:left;
+}
+
+#footer .threecol {
+width: 22%;
+margin-left:4%;
+margin-bottom:0px;
+}
+
+.fourcol {
+width: 31.68%;
+margin:0 0 0 0;
+padding:0;
+float:left;
+position:relative;
+}
+
+.fifthcol {
+width: 16%;
+padding:0;
+margin:0 0 0 4%;
+float:left;
+margin-bottom:40px;
+}
+
+.eightcol {
+width: 65.2%;
+padding-right:0;
+padding-left:0;
+margin:0 3% 0 0;
+float:left;
+}
+
+.sixcol {
+width:47.5%;
+margin-left:5%;
+}
+
+.twelvecol {
+width: 90%;
+float: left;
+}
+
+.first {
+margin-left: 0px !important;
+}
+
+object, embed {
+max-width: 100%;
+}
+
+
+
+img {
+	height: auto;
+}
+
+
+/* Smaller screens */
+
+@media screen and (max-width: 1000px){
+
+.container {
+width:auto;
+margin: 0 20px;
+padding:0 0;
+}
+
+.imgwrap img,
+.imgwrap img:hover{ width:100% !important;}
+	
+}
+
+
+@media screen and (max-width: 970px){
+
+#clientsbox li{ width:24%;}
+
+li.services{ width:27%}
+
+.resmode-No{ display:none; visibility:hidden;}
+
+.section .container{padding:40px 0 !important;}
+
+
+#header{
+	padding:30px 0 25px 0 !important;
+	position: relative !important;
+	top: auto;
+	left: auto;
+	margin:0;
+}
+
+#header a img.logo{margin:0 0 30px 0;}
+
+#nav,#main-nav{ float:left; width:100%}
+
+#nav li,#main-nav li{ float:left; margin-left:0; margin-bottom:10px;}
+
+.flexfull_wrap{ max-height: 580px !important}
+
+}
+
+/* Mobile */
+
+@media screen and (max-width: 770px){
+
+.flexfull_wrap,.flexfull,.flexfull{position:relative; height:auto !important; width:100%; margin:0 0 0 0;}
+
+.flexfull>ul.slides>li:after {
+display:none; visibility: hidden;
+}
+
+.stuff p{ display:none; visibility:hidden}
+
+.resmode-No{ display:none; visibility:hidden;}
+
+}
+
+@media handheld, only screen and (max-width: 740px) {
+
+body {
+font-size: 14px;
+-webkit-text-size-adjust: none;
+}
+
+body {
+width: 100%;
+min-width: 0;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 0;
+padding-right: 0;
+margin-top:0;
+}
+
+
+#header,
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol,.fifthcol,
+#footer .fourcol,
+li.services,ul.clients li
+ {
+width: auto;
+float: none !important;
+margin-left: 0;
+margin-right: 0;
+}
+
+
+.blogpage{ margin:0 20px !important;}
+
+#content,#sidebar{
+	padding-left:0;
+	padding-right:0;
+	margin-top:40px;
+}
+
+.foliopost .entry,
+.blogposts .entry{ border-right:none; padding:20px 0 20px 0}
+
+.blogpage #content{ border-right:none;}
+
+.flexfull .container { margin:0 8%;}
+
+.flexfull .flex-direction-nav li a{ display:none;}
+
+.stuff h1,.stuff h2{ font-size:45px; border:none;}
+
+.flex-control-nav{ bottom:25px;}
+
+#copyright{ padding:0 5%;}
+
+a.imgwrap,
+.item_full img{width:100% !important}
+
+.pagination{ margin-bottom:40px; height:35px;}
+
+ul.clients li{ width:100%;}
+
+
+.homeblog li{ width:46% !important; margin-right:4% !important;}
+
+.homeblog li img{ width:100%}
+
+.intro h1.fl{ text-align:center; float:none !important; clear:both;}
+
+#portfolio-filter a{ line-height:30px;}
+
+}
+
+
+@media only screen and (max-width: 639px) {
+
+.scrollTo_top{ visibility:hidden; display:none}
+
+.tmnf-sc-quote.left,
+.tmnf-sc-quote.right{ width:100%; float:none; margin-left:0; margin-right:0}
+
+
+.contact-form .forms textarea,
+.contact-form .forms input.txt{ width:100%; float:none; margin-left:0; margin-right:0; padding-left:0; padding-right:0}
+
+.contact-form .forms label{ margin-bottom:10px}
+
+.contact-form .forms .buttons .submit,
+.contact-form .forms input#sendCopy{ margin-left:0;}
+
+
+.flexfull_social{ display:none; visibility:hidden}
+
+.nav li ul{ width:100%; border:none;}
+
+.section>.container>h2{ font-size:30pt; letter-spacing:-2px;}
+
+.centerrow .centerthreecol,
+.centerrow .centerfourcol{ width:100%; margin:0 0 30px 0; height:auto;}
+
+#header a img.logo{ display:block; float:none; margin:0 auto 30px auto;}
+
+#nav>li,#main-nav>li{width:100%;}
+
+ul.block{ overflow:hidden; height:auto;}
+ul.block li{ position:relative !important; width:50%; height:100px; float:left; top:auto; left:auto;}
+ul.block li img{ width:130%; position:relative;}
+ul.block li .inside{ left:5px; bottom:0}
+ul.block li h2{ font-size:14pt;}
+
+li.pricing_three,
+li.pricing_four{ width:48%}
+
+#clientsbox li{ width:48%;}
+
+#clientsbox li img{ width: auto;}
+
+.section>.container>p {
+	   -moz-column-count: 1;
+       -moz-column-gap:30px;
+       -webkit-column-count: 1;
+       -webkit-column-gap:30px;
+	   margin-bottom:25px;
+	   overflow:hidden;
+}
+
+iframe{width:100%; max-height:400px}
+
+ul.medpost>li>.meta,
+ul.medpost>li>.entry{ text-align:left; width:100%;}
+
+ul.medpost>li>.meta{height:20px; overflow:hidden;}
+
+.flexfull .inside{ top:30px;}
+
+.stuff h1,.stuff h2{ font-size:30px; letter-spacing:1px; border:none;}
+
+} 
+
+@media only screen and (max-width: 429px) {
+
+#nav>li,#main-nav>li{width:100%;}
+
+iframe{max-height:280px}
+
+.imgwrap{ background-image:none !important;}
+
+}
