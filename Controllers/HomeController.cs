@@ -46,7 +46,6 @@ namespace Voodoo.Controllers
             var path = this.HttpContext.Server.MapPath(Url.Content("~/Content/Images/Estudio"));
             var images = Directory.EnumerateFiles(path, "*.jpg");
             var relatives = images.Select(m => m.Replace(HttpContext.Request.ServerVariables["APPL_PHYSICAL_PATH"], "/").Replace(@"\", "/").Insert(0, "~")).ToList();
-            //relatives.Add("~/Content/images/custom/more-blog.png");
             return PartialView(relatives);
         }
 
