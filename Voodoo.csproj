@@ -55,7 +55,7 @@
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -120,6 +120,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Sections.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\PhotoCollection.cs" />
+    <Compile Include="Models\VideoCollection.cs" />
+    <Compile Include="Models\ContentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +154,7 @@
     <Content Include="Content\images\bg\bg-square6.png" />
     <Content Include="Content\images\bg\bg-transparent.png" />
     <Content Include="Content\images\bg\bg-zig.png" />
+    <Content Include="Content\images\bg\black_vert1.png" />
     <Content Include="Content\images\bg\intro_inner_bg2.png" />
     <Content Include="Content\images\bg\pattern.png" />
     <Content Include="Content\images\bg_trans.png" />
@@ -184,13 +190,16 @@
     <Content Include="Content\images\divider9.png" />
     <Content Include="Content\images\edge-shadows-small.png" />
     <Content Include="Content\images\edge-shadows.png" />
-    <Content Include="Content\images\Estudio\L1150310.JPG" />
-    <Content Include="Content\images\Estudio\L1150339.JPG" />
-    <Content Include="Content\images\Estudio\L1150340.JPG" />
-    <Content Include="Content\images\Estudio\L1150352.JPG" />
-    <Content Include="Content\images\Estudio\L1150385.JPG" />
-    <Content Include="Content\images\Estudio\L1150455.JPG" />
-    <Content Include="Content\images\Estudio\L1150457.JPG" />
+    <Content Include="Content\images\icons\expand.png" />
+    <Content Include="Content\images\icons\video-player.png" />
+    <Content Include="Content\images\loader.gif" />
+    <Content Include="Content\images\photos\L1150310.JPG" />
+    <Content Include="Content\images\photos\L1150339.JPG" />
+    <Content Include="Content\images\photos\L1150340.JPG" />
+    <Content Include="Content\images\photos\L1150352.JPG" />
+    <Content Include="Content\images\photos\L1150385.JPG" />
+    <Content Include="Content\images\photos\L1150455.JPG" />
+    <Content Include="Content\images\photos\L1150457.JPG" />
     <Content Include="Content\images\featured-description.png" />
     <Content Include="Content\images\fotos-home\FOTO-1.png" />
     <Content Include="Content\images\fotos-home\FOTO-10.png" />
@@ -377,7 +386,11 @@
     <Content Include="Content\images\transparent-dark.png" />
     <Content Include="Content\images\transparent-light.png" />
     <Content Include="Content\images\transparent.png" />
+    <Content Include="Content\images\videos\462333767_640.jpg" />
     <Content Include="Content\js\lib\css3-mediaqueries.js" />
+    <Content Include="Content\js\lib\jquery-1.10.2.js" />
+    <Content Include="Content\js\lib\jquery-ui-1.10.4.custom.js" />
+    <Content Include="Content\js\lib\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="Content\js\lib\jquery.flexslider-min.js" />
     <Content Include="Content\js\lib\jquery.flexslider.start.folio.js" />
     <Content Include="Content\js\lib\jquery.flexslider.start.main.js" />
@@ -385,11 +398,30 @@
     <Content Include="Content\js\lib\jquery.nav.js" />
     <Content Include="Content\js\lib\jquery.prettyPhoto.js" />
     <Content Include="Content\js\lib\jquery.scrollTo.js" />
-    <Content Include="Content\js\lib\jquery.tweet.js" />
+    <Content Include="Content\js\lib\jquery.ui.rlightbox.min.js" />
     <Content Include="Content\js\lib\ownScript.js" />
     <Content Include="Content\js\lib\sticky.nav.js" />
     <Content Include="Content\js\lib\superfish.js" />
     <Content Include="Content\js\lib\tabs.js" />
+    <Content Include="Content\styles\fonts.css" />
+    <Content Include="Content\styles\images\animated-overlay.gif" />
+    <Content Include="Content\styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\styles\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Content\styles\lightbox.css" />
     <Content Include="Content\styles\masstyles.css" />
     <Content Include="Content\styles\font-awesome-ie7.css" />
     <Content Include="Content\styles\font-awesome-ie7.min.css" />
@@ -399,10 +431,9 @@
     <Content Include="Content\styles\prettyPhoto.css" />
     <Content Include="Content\styles\style.css" />
     <Content Include="Content\styles\voodoo.css" />
+    <Content Include="Data\photos.xml" />
+    <Content Include="Data\videos.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Content\js\lib\jquery-1.9.1-vsdoc.js" />
-    <Content Include="Content\js\lib\jquery-1.9.1.js" />
-    <Content Include="Content\js\lib\jquery-1.9.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -444,6 +475,7 @@
     <Content Include="Content\font\AGNextMedium.otf" />
     <Content Include="Content\font\AGNextRegular.otf" />
     <Content Include="Content\font\akzidenz-grotesk-bold.ttf" />
+    <Content Include="Content\font\ufonts.com_akzidenz_grotesk_light.ttf" />
     <None Include="Content\images\icons\teal.psd" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<string>
+﻿@model IEnumerable<Voodoo.Models.Photo>
 <h2 style="text-align:center;">
     <span style="color: #00B4DA;">
         NUESTRO
@@ -16,14 +16,17 @@
     @foreach (var img in Model)
     {
         <li class="post-59 post type-post status-publish format-standard hentry category-design tag-buildings tag-system centerthreecol">
-            <a class="imgwrap">
-                <img width="217" height="170" src="@Url.Content(img)" class="attachment-homeblog wp-post-image" style="opacity: 1; width: 100%;">
+            <a class="imgwrap lb_image" href="@Url.Content("~/Content/images/photos/" + img.File)">
+                <img width="217" height="170" src="@Url.Content("~/Content/images/photos/" + img.Thumb)" class="attachment-homeblog wp-post-image" style="opacity: 1; width: 100%;">
+                <div class="inside">
+                    @img.Text
+                </div>
             </a>
         </li>
     }
     <li class="post-59 post type-post status-publish format-standard hentry category-design tag-buildings tag-system centerthreecol">
         <a class="imgwrap fromhome">
-            <img width="217" height="170" src="@Url.Content(            "~/Content/images/custom/more-blog.png" )" class="attachment-homeblog wp-post-image" style="opacity: 1; width: 100%;">
+            <img width="217" height="170" src="@Url.Content("~/Content/images/custom/more-blog.png" )" class="attachment-homeblog wp-post-image" style="opacity: 1; width: 100%;">
 
             <div class="inside">
 

@@ -3554,11 +3554,13 @@ html[xmlns] .slides
     #portfolio-list li
     {
         line-height: 1.8 !important;
+        width: 300px;
+        height: 168px;
     }
 
-    #portfolio-list .imgwrap
+    #portfolio-list .imgwrap.vimeo
     {
-        background-image: url(../images/icons/zoom-black.png);
+        background-image: url(../images/icons/video-player.png);
         background-position: 50% 80%;
         background-repeat: no-repeat;
         float: left;
@@ -4085,7 +4087,7 @@ ul.homeblog
 
         ul.homeblog li .imgwrap
         {
-            background-image: url(../images/icons/arr-black.png);
+            background-image: url(../images/icons/expand.png);
             background-position: 50% 80%;
             background-repeat: no-repeat;
             float: left;

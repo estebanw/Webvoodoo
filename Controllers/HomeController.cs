@@ -11,10 +11,15 @@ namespace Voodoo.Controllers
     public class HomeController : Controller
     {
         private Sections Sections { get; set; }
+        private ContentProvider ContentProvider { get; set; }
 
-        public HomeController(Sections sections)
+        public HomeController(
+              Sections sections
+            , ContentProvider contentProvider
+        )
         {
             this.Sections = sections;
+            this.ContentProvider = contentProvider;
         }
 
         public ActionResult Index()
@@ -31,7 +36,8 @@ namespace Voodoo.Controllers
         [ChildActionOnly]
         public ActionResult Trabajos()
         {
-            return PartialView();
+            var videos = ContentProvider.GetVideos();
+            return PartialView(videos);
         }
 
         [ChildActionOnly]
@@ -43,10 +49,8 @@ namespace Voodoo.Controllers
         [ChildActionOnly]
         public ActionResult Espacio()
         {
-            var path = this.HttpContext.Server.MapPath(Url.Content("~/Content/Images/Estudio"));
-            var images = Directory.EnumerateFiles(path, "*.jpg");
-            var relatives = images.Select(m => m.Replace(HttpContext.Request.ServerVariables["APPL_PHYSICAL_PATH"], "/").Replace(@"\", "/").Insert(0, "~")).ToList();
-            return PartialView(relatives);
+            var photos = ContentProvider.GetPhotos();
+            return PartialView(photos);
         }
 
         [ChildActionOnly]

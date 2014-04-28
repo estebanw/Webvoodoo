@@ -83,7 +83,7 @@ a:hover, .body1 a:hover, #serinfo a:hover
 
 .intro
 {
-    font: normal 12px/2.2em "Akzidenz Grotesk Next", sans-serif;
+    font: normal 12px/2.2em "Raleway", sans-serif;
     color: #ffffff;
 }
 
@@ -94,24 +94,24 @@ a:hover, .body1 a:hover, #serinfo a:hover
 
 h1
 {
-    font: normal 25px/1.5em "Akzidenz Grotesk Next", sans-serif;
+    font: normal 25px/1.5em "Raleway", sans-serif;
     color: #222222;
 }
 
 #block ul li h2
 {
-    font-family: "Akzidenz Grotesk Next", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 h2
 {
-    font: normal 24px/1.2em "Akzidenz Grotesk Next", sans-serif;
+    font: normal 24px/1.2em "Raleway", sans-serif;
     color: #222222;
 }
 
 p.image, blockquote
 {
-    font-family: "Akzidenz Grotesk Next", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 h3
@@ -133,13 +133,13 @@ h4
 
 h5
 {
-    font: normal 14px/1.5em "Akzidenz Grotesk Next", sans-serif;
+    font: normal 14px/1.5em "Raleway", sans-serif;
     color: #222222;
 }
 
 h6
 {
-    font: normal 14px/1.5em "Akzidenz Grotesk Next", sans-serif;
+    font: normal 14px/1.5em "Raleway", sans-serif;
     color: #222222;
 }
 
@@ -147,6 +147,7 @@ h6
 {
     font: normal 12px/1.7em "Roboto", sans-serif;
     color: #fff;
+    font-weight:900;
 }
 
 #portfolio-filter a, .breadcrumb

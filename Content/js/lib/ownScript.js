@@ -175,21 +175,25 @@ jQuery(document).ready(function(){
 		});
 
 
-	function lightbox() {
-		// Apply PrettyPhoto to find the relation with our portfolio item
-		jQuery("a[rel^='prettyPhoto']").prettyPhoto({
-			// Parameters for PrettyPhoto styling
-			animationSpeed:'fast',
-			slideshow:5000,
-			theme:'pp_default',
-			show_title:false,
-			overlay_gallery: false,
-			social_tools: false
-		});
-	}
+	//function lightbox() {
+	//	// Apply PrettyPhoto to find the relation with our portfolio item
+	//	jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+	//		// Parameters for PrettyPhoto styling
+	//		animationSpeed:'fast',
+	//		slideshow:5000,
+	//		theme:'pp_default',
+	//		show_title:false,
+	//		overlay_gallery: false,
+	//		social_tools: false
+	//	});
+	//}
 	
-	if(jQuery().prettyPhoto) {
-		lightbox();
-	}
+	//if(jQuery().prettyPhoto) {
+	//	lightbox();
+	//}
 
+	jQuery(function ($) {
+	    $(".vimeo").rlightbox();
+	    $(".lb_image").rlightbox();
+	});
 });

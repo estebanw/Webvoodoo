@@ -1,5 +1,12 @@
 ﻿.section#clientes {
-    background-image: url(/Content/images/bg/intro_inner_bg2.png) ;
+    background-image: url(/Content/images/bg/intro_inner_bg2.png);
     background-attachment: scroll;
     background-position: 50% 0px;
+}
+
+#nosotros {
+    background-image: url(/Content/images/bg/black_vert1.png);
+    background-color: rgb(229, 229, 229);
+    background-attachment: scroll;
+    background-position: 50% 0;
 }
